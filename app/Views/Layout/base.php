@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?= $this->renderSection('title'); ?>
-    <link rel="stylesheet" href="/assets/navbar.css">
-    <link rel="stylesheet" href="/assets/footer.css">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css"> <!-- css untuk semua -->
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- main font: "Montserrat" -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+    rel="stylesheet">
 
     <!-- add your own css dude -->
     <?= $this->renderSection('custom_css'); ?>
@@ -86,20 +92,14 @@
         </div>
     </footer>
 
-    <script>
-        const menutoggle = document.querySelector('.menu-toggle input');
-        const nav = document.querySelector('nav ul');
-        const main = document.querySelector('.main')
+    <!-- Untuk Multiple Modal -->
+    <script src="assets/js/modalLogin.js"></script>
 
-        menutoggle.addEventListener('click', function(){
-            nav.classList.toggle('slide');
+    <!-- Untuk Toogle Navbar Waktu Responsive Ukuran Handphone -->
+    <script src="assets/js/toggleNavbar.js"></script>
 
-        })
-
-        main.addEventListener('click', function(){
-        	nav.classList.remove('slide');
-        })
-    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <?= $this->renderSection('custom_bodyScript'); ?>
 </body>
 </html>

@@ -1,0 +1,224 @@
+/* HELPCENTER */
+
+.main-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  flex-direction: column;
+}
+.section {
+  margin-bottom: 60px;
+}
+.hero {
+  background-image: url(//theme.zdassets.com/theme_assets/678183/1999d34bfd08d21b6de46f07849ddd4c5a4efabb.svg);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  padding: 0 20px;
+  text-align: center;
+  width: 100%;
+}
+.hero-inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 610px;
+  margin: 0 auto;
+}
+.help-center {
+  font-size: 36px;
+  line-height: 44px;
+  color: black;
+  font-weight: 700;
+  margin: 0 0 20px;
+  padding: 35px 0 0 0;
+  text-align: center;
+}
+.title {
+  font-size: 22px;
+}
+.search {
+  position: relative;
+}
+.search-full input[type="search"] {
+  border: 1px solid #666;
+}
+.search input[type="search"] {
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: #666;
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 2px;
+  -webkit-appearance: none;
+  width: 100%;
+}
+input:not([type="checkbox"]) {
+  outline: none;
+}
+[type="search"] {
+  outline-offset: -2px;
+}
+input {
+  font-weight: 300;
+  max-width: 100%;
+  transition: border 0.12s ease-in-out;
+}
+input,
+textarea {
+  font-size: 14px;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  line-height: 1.15;
+  margin: 0;
+}
+.intro {
+  text-align: center;
+}
+.intro {
+  margin-top: 104px;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 100%;
+  margin: 0;
+}
+.search-iconb {
+  top: 86%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 15px;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  color: #777;
+}
+.flex-container {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+ul {
+  padding: 0;
+}
+a {
+  color: rgba(114, 137, 218, 1);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.flex-item,
+.title {
+  font-size: 22px;
+  font-weight: 400;
+  color: black;
+  margin-top: 116px;
+}
+.flex-item hr {
+  height: 1px;
+  border: none;
+  background-color: #99aab5;
+  opacity: 0.5;
+  width: 50px;
+  margin: -6px auto 20px;
+}
+.flex-item,
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  /* width: 200px; */
+  margin: -10px auto 0;
+  color: #68727e;
+}
+.flex-item {
+  background: white;
+  box-shadow: 0px 9px 30px rgba(200, 200, 200, 0.3);
+  padding: 5px;
+  margin: 10px;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  border-radius: 5px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.announcement {
+  background-image: url("https://theme.zdassets.com/theme_assets/678183/1bd76d1fd516f8dacd3c7422a8ceb929ef2502d9.svg");
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  width: 240px;
+  height: 260px;
+}
+.account-settings {
+  background-image: url(https://theme.zdassets.com/theme_assets/678183/3da6524afd9979b44c5f6ceaf19e812c204ad74e.svg);
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  width: 240px;
+  height: 260px;
+}
+.getting-started {
+  background-image: url(https://theme.zdassets.com/theme_assets/678183/35f736c34c81d953054d0c1e202f71c8094f8fbf.svg);
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  width: 240px;
+  height: 260px;
+}
+.billing {
+  background-image: url("//theme.zdassets.com/theme_assets/678183/e5bd3c63530b0a8e55b406528f2fd9d61b8bd923.svg");
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  width: 240px;
+  height: 260px;
+}
+.faqs {
+  background-image: url("//theme.zdassets.com/theme_assets/678183/1883060a5132c470528a20c1cfe42976e7c167ca.svg");
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  width: 240px;
+  height: 260px;
+}
+.twitter {
+  background-image: url("//theme.zdassets.com/theme_assets/678183/ceb4c1d378277188ab383a50029b43e5d3b1581b.svg");
+  background-repeat: no-repeat;
+  background-size: 106px;
+  background-position: center 14px;
+  background-color: #f2f2f2;
+  width: 260px;
+  height: 260px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 868px) {
+  .search input[type="search"] {
+    width: 90%;
+  }
+  .search-iconb {
+    top: 86%;
+    position: absolute;
+    left: 35px;
+  }
+}

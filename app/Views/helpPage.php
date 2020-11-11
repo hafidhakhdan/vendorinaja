@@ -6,13 +6,13 @@
 <?= $this->endSection('title'); ?>
 
 <?= $this->section('custom_css'); ?>
-    <link rel="stylesheet" href="/assets/helpcenter.css">
+    <link rel="stylesheet" href="/assets/css/helpcenter.css">
 <?= $this->endSection('custom_css'); ?>
 
 <!-- section untuk kalian bermain dan belajar -->
 <?= $this->section('content'); ?>
     <!-- HELP CENTER -->
-    <main class="main">
+    <main class="main-container">
         <section id="main-content" class="section hero">
             <div class="hero-inner">
                 <h5 class="help-center">Help Center</h5>

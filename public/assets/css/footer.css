@@ -9,6 +9,7 @@
     padding: 50px;
     background-color: #FFBD12;
     font-family: 'Montserrat', sans-serif;
+    border: 1px solid #000000;
     box-sizing: border-box
 }
 .footer > *{
