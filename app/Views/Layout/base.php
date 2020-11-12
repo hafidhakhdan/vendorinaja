@@ -1,6 +1,7 @@
 <!-- !! KALO MAU UBAH BILANG2 DULU KALO GA GUA GOROK !! -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- main font: "Montserrat" -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
     <!-- add your own css dude -->
     <?= $this->renderSection('custom_css'); ?>
@@ -22,13 +22,15 @@
     <?= $this->renderSection('custom_headScript'); ?>
 
 </head>
-<body class="main">
+
+<body>
 
     <!-- navbar cok -->
     <?= $this->include('Layout/navbar'); ?>
-
-    <!-- place your page content here -->
-    <?= $this->renderSection('content'); ?>
+    <div class="main">
+        <!-- place your page content here -->
+        <?= $this->renderSection('content'); ?>
+    </div>
 
     <footer class="footer">
         <div class="footer-left">
@@ -36,10 +38,10 @@
             <p>Your Own Design.</p>
             <div class="line"></div>
             <div class="socials">
-                <a href="" ><i class="fa fa-twitter"></i></a>
-                <a href="" ><i class="fa fa-instagram"></i></a>
-                <a href="" ><i class="fa fa-facebook"></i></a>
-                <a href="" ><i class="fa fa-youtube"></i></a>
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-instagram"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-youtube"></i></a>
             </div>
         </div>
         <ul class="footer-right">
@@ -83,7 +85,7 @@
                     <li><a href="#">Acknowledgement</a></li>
                     <li><a href="#">Licenses</a></li>
                 </ul>
-            </li>                     
+            </li>
         </ul>
         <div class="lineBottom"></div>
         <div class="footer-bottom">
@@ -102,4 +104,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <?= $this->renderSection('custom_bodyScript'); ?>
 </body>
+
 </html>
