@@ -21,11 +21,15 @@ SET time_zone = "+00:00";
 -- Database: `vendorinaja`
 --
 
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `auth_activation_attempts`
 --
+create database vendorinaja;
+
+use vendorinaja;
 
 CREATE TABLE `auth_activation_attempts` (
   `id` int(11) UNSIGNED NOT NULL,
