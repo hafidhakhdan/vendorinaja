@@ -90,7 +90,7 @@
         <div class="lineBottom"></div>
         <div class="footer-bottom">
             <h2>Vendorin.aja</h2>
-            <a href=""><button class="signup">Sign up</button></a>
+            <button data-toggle="modal" data-target="#exampleModal3" class="signup">Sign up</button>
         </div>
     </footer>
 

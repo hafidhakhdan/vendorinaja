@@ -181,7 +181,27 @@ nav ul li a:hover {
   color: #000000;
 }
 .form-control {
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+}
+
+.modal-body p span {
+  color: rgb(102, 101, 101);
+}
+.modal-body p span:hover {
+  color: #ffbd12;
+  cursor: pointer;
+}
+/* Style khusus Register */
+input.border-secondary {
+  border-radius: 30px;
+  width: 270px;
+}
+.allSign {
+  color: #00c6ae;
+}
+.allSign:hover {
+  color: #038878;
+  cursor: pointer;
 }

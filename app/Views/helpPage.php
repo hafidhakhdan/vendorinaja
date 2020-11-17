@@ -91,7 +91,6 @@
                     <h3 class="description">Have a quick question? Hit us up on Twitter!</h3>
                 </li>
             </a>
-
         </ul>
     </section>
 </main>
