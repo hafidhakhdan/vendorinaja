@@ -1,11 +1,11 @@
 <?= $this->extend('/Layout/base'); ?>
 
 <?= $this->section('title'); ?>
-    <title>Vendorin.aja!</title>
+<title>Vendorin.aja!</title>
 <?= $this->endSection('title'); ?>
 
 <?= $this->section('custom_css'); ?>
-    <link rel="stylesheet" href="/assets/css/homepage.css">
+<link rel="stylesheet" href="/assets/css/homepage.css">
 <?= $this->endSection('custom_css'); ?>
 
 <?= $this->section('content'); ?>
@@ -14,19 +14,19 @@
   <div class="carousel-inner">
     <div class="carousel-item active banner">
       <img class="d-block w-100 bannerImg" src="/assets/img/rakbaju-1.jpg" alt="First slide">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-flex align-items-center justify-content-center d-none d-md-block">
         <h1>Halo?</h1>
       </div>
     </div>
     <div class="carousel-item banner">
       <img class="d-block w-100 bannerImg" src="/assets/img/rakbaju-2.jpg" alt="Second slide">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-flex align-items-center justify-content-center d-md-block">
         <h1>Custom Sepuasnya.</h1>
       </div>
     </div>
     <div class="carousel-item banner">
       <img class="d-block w-100 bannerImg" src="/assets/img/rakbaju-3.jpg" alt="Third slide">
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-flex align-items-center justify-content-center d-none d-md-block">
         <h1>disini aja.</h1>
       </div>
     </div>
@@ -44,32 +44,32 @@
 
 <!-- card Product -->
 <div class="container mt-5">
-    <div class="card-deck">
+  <div class="card-deck">
     <div class="card">
-        <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
-        <div class="card-body">
+      <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
+      <div class="card-body">
         <h5 class="card-title">T-Shirts</h5>
         <hr class="col-4">
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit et eget viver</p>
-        </div>
+      </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
-        <div class="card-body">
+      <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
+      <div class="card-body">
         <h5 class="card-title">PDH</h5>
         <hr class="col-4">
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit et eget viver</p>
-        </div>
+      </div>
     </div>
     <div class="card">
-        <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
-        <div class="card-body">
+      <img class="card-img-top" src="assets/img/kaos.jpg" alt="Card image cap">
+      <div class="card-body">
         <h5 class="card-title">Jacket</h5>
         <hr class="col-4">
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit et eget viver</p>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
 <!-- end of card Product -->
 

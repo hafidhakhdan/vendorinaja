@@ -1,17 +1,38 @@
-.banner{
-    max-height: 400px;
-    background: black;
-    overflow: hidden;
+.banner {
+  max-height: 400px;
+  background: black;
+  overflow: hidden;
+  z-index: -1;
 }
-.bannerImg{
-    object-fit: cover;
-    opacity: 0.4;
+.bannerImg {
+  object-fit: cover;
+  opacity: 0.4;
 }
-.carousel-caption{
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: initial;
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
 }
-.card-img{
-    max-height: 200px;
+
+.card-img {
+  max-height: 200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: -1;
+}
+
+@media screen and (max-width: 868px) {
+  .card-text {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+  .card-text {
+    font-size: inherit;
+  }
 }
