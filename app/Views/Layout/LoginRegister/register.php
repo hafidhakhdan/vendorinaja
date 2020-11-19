@@ -11,11 +11,11 @@
             <div class="modal-body d-flex flex-column align-items-center mt-3 ">
                 <div class="button d-flex flex-column justify-content-between pr-2 ">
                     <button class="btn btn-signin mb-3">
-                        <img class="mr-2" width="22" height="22" src="assets/img/google.svg" alt="google">
+                        <img class="mr-2" width="22" height="22" src="/assets/img/google.svg" alt="google">
                         <span>Sign up with google</span>
                     </button>
                     <button class="btn btn-signin" id="signup-2" data-toggle="modal" data-target="#exampleModal4">
-                        <img class="mr-3" width="22" height="22" src="assets/img/email.svg" alt="email">
+                        <img class="mr-3" width="22" height="22" src="/assets/img/email.svg" alt="email">
                         <span>Sign up with email</span>
                     </button>
                 </div>

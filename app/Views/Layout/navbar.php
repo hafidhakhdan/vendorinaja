@@ -4,7 +4,7 @@
      <h1>Vendorinaja</h1>
    </div>
    <ul>
-     <li><a href="">Home</a></li>
+     <li><a href="home/home">Home</a></li>
      <li><a href="">Why Vendorinaja?</a></li>
      <li><a href="">Features</a></li>
      <li><a href="">Pricing</a></li>

@@ -1,8 +1,14 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 class Home extends BaseController
 {
 	public function index()
+	{
+		return view('landingPage');
+	}
+	public function home()
 	{
 		return view('home');
 	}

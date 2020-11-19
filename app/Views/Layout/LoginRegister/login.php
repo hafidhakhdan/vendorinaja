@@ -11,11 +11,11 @@
              <div class="modal-body d-flex flex-column align-items-center mt-3 ">
                  <div class="button d-flex flex-column justify-content-between pr-2 ">
                      <button class="btn btn-signin mb-3">
-                         <img class="mr-2" width="22" height="22" src="assets/img/google.svg" alt="google">
+                         <img class="mr-2" width="22" height="22" src="/assets/img/google.svg" alt="google">
                          <span>Sign in with google</span>
                      </button>
                      <button class="btn btn-signin" id="signin" data-toggle="modal" data-target="#exampleModal2">
-                         <img class="mr-3" width="22" height="22" src="assets/img/email.svg" alt="email">
+                         <img class="mr-3" width="22" height="22" src="/assets/img/email.svg" alt="email">
                          <span>Sign in with email</span>
                      </button>
                  </div>
@@ -42,11 +42,11 @@
              </div>
              <div class="modal-body mx-3">
                  <div class="md-form mb-5 d-flex">
-                     <img class="mr-3 mt-1" width="22" height="22" src="assets/img/email.svg" alt="email">
+                     <img class="mr-3 mt-1" width="22" height="22" src="/assets/img/email.svg" alt="email">
                      <input type="email" placeholder="email..." id="defaultForm-email" class="form-control validate">
                  </div>
                  <div class="md-form mb-4 d-flex">
-                     <img class="mr-3 mt-1" width="22" height="22" src="assets/img/padlock.svg" alt="email">
+                     <img class="mr-3 mt-1" width="22" height="22" src="/assets/img/padlock.svg" alt="email">
                      <input type="password" placeholder="password..." id="defaultForm-pass" class="form-control validate">
                  </div>
              </div>
