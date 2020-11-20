@@ -3,15 +3,7 @@
   margin: 0px;
   padding: 0px;
 }
-p {
-  font-family: "Montserrat", sans-serif;
-  font-style: Regular;
-  font-size: 17px;
-  line-height: 29px;
-  line-height: 100%;
-  align: Left;
-  vertical-align: Top;
-}
+
 .content-1 h1 {
   font-size: 35px;
 }
@@ -80,6 +72,10 @@ img[src*="standing1"] {
   }
 }
 @media (max-width: 768px) {
+  .content-1 {
+    display: flex;
+    justify-content: center;
+  }
   .content-1 h1,
   .btn {
     text-align: center;
