@@ -16,6 +16,10 @@ class Home extends BaseController
 	{
 		return view('helpPage');
 	}
+	public function transaksi()
+	{
+		return view('transaction');
+	}
 	//--------------------------------------------------------------------
 
 }
