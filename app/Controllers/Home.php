@@ -12,6 +12,10 @@ class Home extends BaseController
 	{
 		return view('home');
 	}
+	public function checkout()
+	{
+		return view('checkout');
+	}
 	public function help()
 	{
 		return view('helpPage');
