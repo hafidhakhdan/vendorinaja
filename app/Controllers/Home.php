@@ -8,14 +8,17 @@ class Home extends BaseController
 	{
 		return view('landingPage');
 	}
-	public function home()
-	{
-		return view('home');
-	}
+	//public function dashboard()
+	//{
+	//	return view('home');
+	//}
 	public function help()
 	{
 		return view('helpPage');
 	}
+
+
+
 	//--------------------------------------------------------------------
 
 }

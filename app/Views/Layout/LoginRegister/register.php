@@ -39,18 +39,19 @@
                 </button>
                 <h5 class="modal-title " id="exampleModalLabel">Sign Up with email</h5>
             </div>
-            <div class="modal-body d-flex flex-column align-items-center mt-3 ">
-                <p>Enter your email address to create an account</p>
-                <div class="button d-flex flex-column justify-content-between pr-2 ">
-                    <div class="form-group d-flex flex-column">
-                        <span>Your email</span>
-                        <input class="form-control pl-3 mt-3 border border-secondary " type="text" name="" id="">
+            <form action="Auth/register" method="POST">
+                <div class="modal-body d-flex flex-column align-items-center mt-3 ">
+                    <p>Enter your email address to create an account</p>
+                    <div class="button d-flex flex-column justify-content-between pr-2 ">
+                        <div class="form-group d-flex flex-column">
+                            <span>Your email</span>
+                            <input class="form-control pl-3 mt-3 border border-secondary " type="text" name="email" id="email">
+                        </div>
+                        <div class="form-group d-flex flex-column">
+                            <span>Your password</span>
+                            <input class="form-control mt-3 border-secondary pl-3" type="password" name="password" id="password">
+                        </div>
                     </div>
-                    <div class="form-group d-flex flex-column">
-                        <span>Your password</span>
-                        <input class="form-control mt-3 border-secondary pl-3" type="password">
-                    </div>
-                </div>
-                <button id="go-signin" class="mt-4 btn btn-dark">Continue</button>
-                <span class="mt-4 mb-4 allSign" id="back-signup">
-                    < All sign up options</span> </div> </div> </div> </div>
+                    <button type="submit" id="go-signin" class="mt-4 btn btn-dark">Continue</button>
+                    <span class="mt-4 mb-4 allSign" id="back-signup">
+                        < All sign up options</span> </div> </div> </div> </div> </form>
