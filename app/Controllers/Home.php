@@ -28,6 +28,10 @@ class Home extends BaseController
 	{
 		return view('costumProduct');
 	}
+	public function pricing()
+	{
+		return view('pricing');
+	}
 	//--------------------------------------------------------------------
 
 }
