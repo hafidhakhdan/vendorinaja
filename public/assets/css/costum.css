@@ -1,0 +1,236 @@
+.mini-thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 1px solid black;
+  background-size: cover;
+}
+.details h5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: #000000;
+}
+.material-choose,
+.color-choose,
+.formclass {
+  width: 70%;
+}
+.content-1 {
+  width: 100%;
+}
+.content-2 {
+  margin: 10px;
+}
+.content-3 .text {
+  width: 100%;
+  padding-left: 30px;
+}
+.content {
+  height: 100%;
+  padding: 20px;
+}
+.section {
+  width: 90%;
+}
+.jumbo {
+  width: 90%;
+  height: 450px;
+  border-radius: 10px;
+}
+.section .thumb {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+.thumbnail-3 {
+  width: 180px;
+  background: #d9dbe1;
+  border-radius: 20px;
+}
+.thumbnail-3 img {
+  display: flex;
+  margin: 10px auto;
+  width: 85%;
+}
+
+.section-1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.jacket {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  color: #000000;
+}
+.section-2 {
+  width: 70%;
+  align-self: center;
+}
+.lines {
+  width: 400px;
+  height: 5px;
+  background-color: #ffbd12;
+}
+.content-3 .btn {
+  color: white;
+  align-self: center;
+}
+.thumb:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* Warna baju */
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 450px;
+  mix-blend-mode: hue;
+  background-color: maroon;
+}
+.bg2 {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 450px;
+  mix-blend-mode: hue;
+  background-color: rgb(17, 17, 104);
+}
+.bg3 {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 450px;
+  mix-blend-mode: hue;
+  background-color: orange;
+}
+.bg4 {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 450px;
+  mix-blend-mode: hue;
+  background-color: rgb(39, 139, 39);
+}
+.bg5 {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 450px;
+  mix-blend-mode: hue;
+  background-color: black;
+}
+#blah {
+  max-width: 180px;
+}
+input[type="file"] {
+  padding: 10px;
+}
+.mini-thumbnail:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.thumbs {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: #c4c4c4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+}
+.thumbs:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.show1 {
+  opacity: 0.2;
+}
+.thumbs2 {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background: #c4c4c4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 0;
+}
+.thumbs2:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.show2 {
+  opacity: 0.2;
+}
+.active {
+  opacity: 0.5;
+}
+
+/* responsive breakpoint */
+@media screen and (max-width: 1124px) {
+  .thumbs,
+  .thumbs2 {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+  }
+  .thumbnail-3 {
+    width: 90%;
+  }
+
+  .thumbnail-3 img {
+    width: 85%;
+  }
+  .mini-thumbnail {
+    width: 20%;
+    height: 55px;
+    margin-right: 10px;
+  }
+  .material-choose,
+  .color-choose {
+    width: 80%;
+  }
+  .content-3 .text {
+    padding-left: inherit;
+  }
+  .thumbnail {
+    height: 400px;
+  }
+  .section .thumb {
+    width: 30%;
+    height: 130px;
+  }
+  .formclass {
+    width: 80%;
+  }
+  .thumb-qty {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .thumbnail {
+    height: 340px;
+  }
+  .lines {
+    width: 300px;
+  }
+  .thumb-qty {
+    width: 50px;
+  }
+  .section .thumb {
+    height: 100px;
+  }
+}

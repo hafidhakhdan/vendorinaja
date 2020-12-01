@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row mt-2">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="price-list p-3 pb-5">
                 <div class="header d-flex ">
                     <h6 class="mr-auto pl-4">ITEMS</h6>
@@ -82,7 +82,7 @@
                         <option>COD</option>
                     </select>
                 </div>
-                <div class="line"></div>
+                <div class="line-checkout"></div>
                 <div class="Payment-option">
                     <h6>Payment Option</h6>
                     <select class="form-control mt-3">
