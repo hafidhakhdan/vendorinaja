@@ -37,6 +37,10 @@ class Home extends BaseController
 	{
 		return view('pricing');
 	}
+	public function admin()
+	{
+		return view('admin');
+	}
 	//--------------------------------------------------------------------
 
 }
