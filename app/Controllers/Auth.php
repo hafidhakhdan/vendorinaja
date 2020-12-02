@@ -30,7 +30,7 @@ class Auth extends BaseController
 					'logged_in'     => TRUE
 				];
 				$session->set($ses_data);
-				return redirect()->to('/Open');
+				return redirect()->to('/Open/index');
 			} else {
 				//$session->setFlashdata('msg', 'Wrong Password');
 				return redirect()->to('/');

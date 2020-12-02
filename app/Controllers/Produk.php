@@ -11,7 +11,7 @@ class Produk extends Controller
     {
         $model = new ProdukModel();
         $data['produk']  = $model->getProduk()->getResult();
-        // $data['detail_produk'] = $model->getCategory()->getResult();
+        $data['detail_produk'] = $model->getDetailProduk()->getResult();
         echo view('dummyProduk', $data);
     }
 }
