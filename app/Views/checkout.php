@@ -27,7 +27,7 @@
                 <?php foreach ($custom_produk as $row) : ?>
                     <div class="td mt-3 p-2 d-flex">
                         <div class="mr-auto pl-2 d-flex">
-                            <img src="/assets/img/image.png" width="40%" height="95px" alt="">
+                            <img src="../img/<?= $row->gambar_design; ?>" width="40%" height="95px" alt="">
                             <div class="barang ml-4 ">
                                 <h6>T-Shirt <?= $row->id_custom; ?></h6>
                                 <div class="detail d-flex flex-column">

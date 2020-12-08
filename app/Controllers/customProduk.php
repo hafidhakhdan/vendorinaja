@@ -12,11 +12,6 @@ class customProduk extends Controller
     {
 
         $model = new TransaksiModel();
-        //  $dataDua = array(
-        //    'id_user' => session()->get('id_user'),
-        //  'id_checkout' => session()->get('id_user') + 1
-        //);
-        //$model->saveCheckout($dataDua);
 
 
         $gambar = $this->request->getFile('gambar_design');

@@ -32,7 +32,24 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Publik::index');
-$routes->get('/Open', 'Open::index', ['filter' => 'auth']);
+$routes->get('/Home', 'Home::index', ['filter' => 'auth']);
+$routes->get('Home/', 'Home::index', ['filter' => 'auth']);
+$routes->get('Home/admin', 'Home::admin', ['filter' => 'auth']);
+$routes->get('Home/pricing', 'Home::pricing', ['filter' => 'auth']);
+$routes->get('Home/custom', 'Home::custom', ['filter' => 'auth']);
+$routes->get('Home/checkout', 'Home::checkout', ['filter' => 'auth']);
+$routes->get('Home/transaksi', 'Home::transaksi', ['filter' => 'auth']);
+$routes->get('Home/help', 'Home::help', ['filter' => 'auth']);
+
+//$routes->group('Home', ['filter' => 'auth'], function ($routes) {
+//	$routes->get('/Home', 'Home::index');
+//	$routes->get('Home/help', 'Home::help');
+//	$routes->get('Home/checkout', 'Home::checkout');
+//	$routes->get('Home/transaksi', 'Home::transaksi');
+//	$routes->get('Home/custom', 'Home::custom');
+//	$routes->get('Home/pricing', 'Home::pricing');
+// $routes->post('products/store', 'Products::store');
+//});
 
 /**
  * --------------------------------------------------------------------
