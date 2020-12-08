@@ -1,5 +1,5 @@
 .table-wrapper {
-    width: 700px;
+    width: 1000px;
     margin: 30px auto;
     background: #fff;
     padding: 20px;	
@@ -75,4 +75,7 @@ table.table .form-control.error {
 }
 table.table td .add {
     display: none;
+}
+.gambar{
+    max-width: 300px;
 }

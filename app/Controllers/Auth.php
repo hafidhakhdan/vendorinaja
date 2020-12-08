@@ -31,9 +31,9 @@ class Auth extends BaseController
 					'logged_in'     => TRUE
 				];
 				$session->set($ses_data);
-				return redirect()->to('/Open/index');
+				return redirect()->to('/Home');
 			} else {
-				//$session->setFlashdata('msg', 'Wrong Password');
+				// $session->setFlashdata('msg', 'Wrong Password');
 				return redirect()->to('/');
 			}
 		} else {
@@ -62,7 +62,7 @@ class Auth extends BaseController
 				'level' =>  1
 			];
 			$model->save($data);
-			return redirect()->to('/Home');
+			return redirect()->to('/');
 		} else {
 			$data['validation'] = $this->validator;
 			//echo view('register', $data);

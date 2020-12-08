@@ -35,6 +35,7 @@
                         <th>Produk</th>
                         <th>Total Pembayaran</th>
                         <th>Status</th>
+                        <th>Bukti</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,9 +46,14 @@
                         <td>Rp500.000</td>
                         <td>Belum Lunas</td>
                         <td>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#buktibayar">
+                            <i class="fa fa-camera" aria-hidden="true"></i> <b>Lihat Nota</b> 
+                        </button>
+                        </td>
+                        <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                            <a class="delete" title="Delete"><i class="material-icons">&#xE872;</i></a>
                         </td>
                     </tr>
                     <tr>
@@ -55,6 +61,11 @@
                         <td>Kaos</td>
                         <td>Rp300.000</td>
                         <td>Ngutang</td>
+                        <td>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#buktibayar">
+                            <i class="fa fa-camera" aria-hidden="true"></i> <b>Lihat Nota</b> 
+                        </button>
+                        </td>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
@@ -67,6 +78,11 @@
                         <td>Rp1.000.000</td>
                         <td>Bayar Teruss</td>
                         <td>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#buktibayar">
+                            <i class="fa fa-camera" aria-hidden="true"></i> <b>Lihat Nota</b> 
+                        </button>
+                        </td>
+                        <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
                             <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
@@ -76,5 +92,23 @@
             </table>
         </div>
     </div>
-</div> 
+</div>
+
+<!--Gambar-->
+<div class="modal fade" id="buktibayar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Bukti Pembayaran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="/assets/img/bukti.jpg" alt="conto" class="gambar">
+      </div>
+    </div>
+  </div>
+</div>
+
 <?= $this->endSection('content'); ?>

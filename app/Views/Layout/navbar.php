@@ -5,7 +5,7 @@
    </div>
    <ul>
      <?php if (session()->logged_in == true) : ?>
-       <li><a href="/Home/home">Home</a></li>
+       <li><a href="/Home">Home</a></li>
        <li><a href="#">Product</a></li>
        <li><a href="/Home/help">Support</a></li>
        <li><a href="/Home/transaksi">Transaction</a></li>

@@ -46,6 +46,7 @@
 <div class="container mt-5">
   <div class="card-deck">
     <div class="card">
+    <a href="/Home/custom" class="stretched-link"></a>
       <img class="card-img-top" src="/assets/img/kaos.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">T-Shirts</h5>
@@ -54,7 +55,8 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="/assets/img/kaos.jpg" alt="Card image cap">
+    <a href="/Home/custom" class="stretched-link"></a>
+      <img class="card-img-top" src="/assets/img/PDH.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">PDH</h5>
         <hr class="col-4">
@@ -62,7 +64,8 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="/assets/img/kaos.jpg" alt="Card image cap">
+    <a href="/Home/custom" class="stretched-link"></a>
+      <img class="card-img-top" src="/assets/img/jaket.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Jacket</h5>
         <hr class="col-4">
