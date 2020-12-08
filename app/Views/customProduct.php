@@ -11,7 +11,7 @@
 <?= $this->section('content'); ?>
 
 <div class="container-fluid ">
-    <form method="POST" action="../customProduk/save" enctype="multipart/form-data">
+    <form method="post" action="../customProduk/save" enctype="multipart/form-data">
         <div class="row">
             <div class="col-lg-6 mt-5">
                 <div class="content-1 d-flex flex-column align-items-center">
