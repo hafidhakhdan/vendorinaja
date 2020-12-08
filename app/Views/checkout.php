@@ -24,7 +24,26 @@
                     <H6 class="mr-5">QTY</H6>
                     <H6 class="">PRICE</H6>
                 </div>
-                <div class="td mt-3 p-2 d-flex">
+                <?php foreach ($custom_produk as $row) : ?>
+                    <div class="td mt-3 p-2 d-flex">
+                        <div class="mr-auto pl-2 d-flex">
+                            <img src="/assets/img/image.png" width="40%" height="95px" alt="">
+                            <div class="barang ml-4 ">
+                                <h6>T-Shirt #322</h6>
+                                <div class="detail d-flex flex-column">
+                                    <span><?= $row->bahan_produk; ?></span>
+                                    <span><?= $row->warna_produk; ?></span>
+                                    <span>S/M/L/XL</span>
+                                    <span><?= $row->ukuranS; ?>/<?= $row->ukuranM; ?>/<?= $row->ukuranL; ?>/<?= $row->ukuranXL; ?></span>
+                                    <span><?= $row->gambar_design; ?></span>
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="qty pr-5">300</h6>
+                        <h6 class="price">$500</h6>
+                    </div>
+                <?php endforeach; ?>
+                <!--<div class="td mt-3 p-2 d-flex">
                     <div class="mr-auto pl-2 d-flex">
                         <img src="/assets/img/image.png" width="40%" height="95px" alt="">
                         <div class="barang ml-4 ">
@@ -53,22 +72,7 @@
                     </div>
                     <h6 class="qty pr-5">300</h6>
                     <h6 class="price">$500</h6>
-                </div>
-                <div class="td mt-3 p-2 d-flex">
-                    <div class="mr-auto pl-2 d-flex">
-                        <img src="/assets/img/image.png" width="40%" height="95px" alt="">
-                        <div class="barang ml-4 ">
-                            <h6>T-Shirt #322</h6>
-                            <div class="detail d-flex flex-column">
-                                <span>Costum design,</span>
-                                <span>Cotton Combed,</span>
-                                <span>S/L/XL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h6 class="qty pr-5">300</h6>
-                    <h6 class="price">$500</h6>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="col-md-4 ">

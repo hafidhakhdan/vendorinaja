@@ -2,23 +2,29 @@
 
 namespace App\Controllers;
 
+use App\Models\TransaksiModel;
+
 class Home extends BaseController
 {
 	public function index()
 	{
-		return view('landingPage');
+		return view('Home');
 	}
-	//public function dashboard()
-	//{
-	//	return view('home');
-	//}
+
 	public function home()
 	{
-		return view('home');
+		return view('Home');
 	}
+
 	public function checkout()
 	{
-		return view('checkout');
+
+		$model = new TransaksiModel();
+		// $data['product']  = $model->getProduct()->getResult();
+		$data['custom_produk'] = $model->getDataCheckout()->getResult();
+		//echo view('product_view', $data);
+
+		return view('checkout', $data);
 	}
 	public function help()
 	{
@@ -29,9 +35,9 @@ class Home extends BaseController
 	{
 		return view('transaction');
 	}
-	public function costum()
+	public function custom()
 	{
-		return view('costumProduct');
+		return view('customProduct');
 	}
 	public function pricing()
 	{
@@ -41,6 +47,10 @@ class Home extends BaseController
 	{
 		return view('admin');
 	}
+
+
+
+
 	//--------------------------------------------------------------------
 
 }

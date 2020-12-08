@@ -11,7 +11,7 @@
 <?= $this->section('content'); ?>
 
 <div class="container-fluid ">
-    <form action="">
+    <form method="POST" action="../customProduk/save" enctype="multipart/form-data">
         <div class="row">
             <div class="col-lg-6 mt-5">
                 <div class="content-1 d-flex flex-column align-items-center">
@@ -34,19 +34,19 @@
                         <h5>Choose Your Material</h5>
                         <div class="material-choose containers  d-flex justify-content-between mt-4">
                             <div class="mini-thumbnail" style="background-image:url('/assets/img/costum/cb30.jpg');">
-                                <input class="thumbs" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="thumbs" type="radio" name="bahan_produk" id="bahan_satu" value="bahan satu" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-image:url('/assets/img/costum/bb30.jpg');">
-                                <input class="thumbs" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="thumbs" type="radio" name="bahan_produk" id="bahan_dua" value="bahan dua" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-image:url('/assets/img/costum/cb30.jpg');">
-                                <input class="thumbs" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="thumbs" type="radio" name="bahan_produk" id="bahan_tiga" value="bahan tiga" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-image:url('/assets/img/costum/bb30.jpg');">
-                                <input class="thumbs" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="thumbs" type="radio" name="bahan_produk" id="bahan_empat" value="bahan empat" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-image:url('/assets/img/costum/cb30.jpg');">
-                                <input class="thumbs" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <input class="thumbs" type="radio" name="bahan_produk" id="bahan_lima" value="bahan lima" checked>
                             </div>
                         </div>
                     </div>
@@ -54,19 +54,19 @@
                         <h5 class="mt-4">Choose Your Color</h5>
                         <div class="color-choose containers2  d-flex justify-content-between mt-4">
                             <div class="mini-thumbnail" style="background-color: maroon;">
-                                <input class="thumbs2" type="radio" name="exampleRadios2" id="exampleRadios2" value="maroon" checked>
+                                <input class="thumbs2" type="radio" name="warna_produk" id="maroon" value="maroon" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-color: rgb(17, 17, 104);">
-                                <input class="thumbs2" type="radio" name="exampleRadios2" id="exampleRadios2" value="blue" checked>
+                                <input class="thumbs2" type="radio" name="warna_produk" id="blue" value="blue" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-color: orange;">
-                                <input class="thumbs2" type="radio" name="exampleRadios2" id="exampleRadios2" value="orange" checked>
+                                <input class="thumbs2" type="radio" name="warna_produk" id="orange" value="orange" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-color: rgb(10, 82, 10);">
-                                <input class="thumbs2 " type="radio" name="exampleRadios2" id="exampleRadios2" value="green" checked>
+                                <input class="thumbs2 " type="radio" name="warna_produk" id="green" value="green" checked>
                             </div>
                             <div class="mini-thumbnail" style="background-color: black;">
-                                <input class="thumbs2" type="radio" name="exampleRadios2" id="exampleRadios2" value="black" checked>
+                                <input class="thumbs2" type="radio" name="warna_produk" id="black" value="black" checked>
                             </div>
                         </div>
                     </div>
@@ -75,19 +75,19 @@
                         <div class="formclass mt-4 d-flex justify-content-between">
                             <div class="form-group d-flex ">
                                 <label class="align-self-center mr-2" for="">S</label>
-                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" type="number">
+                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" name="ukuranS" type="number">
                             </div>
                             <div class="form-group d-flex">
                                 <label class="align-self-center mr-2" for="">M</label>
-                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" type="number">
+                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" name="ukuranM" type="number">
                             </div>
                             <div class="form-group d-flex ">
                                 <label class="align-self-center mr-2" for="">L</label>
-                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" type="number">
+                                <input placeholder="QTY" class="mini-thumbnail thumb-qty" name="ukuranL" type="number">
                             </div>
                             <div class="form-group d-flex">
                                 <label class="align-self-center mr-2" for="">XL</label>
-                                <input placeholder="QTY" class="mb-2 mini-thumbnail thumb-qty" type="number">
+                                <input placeholder="QTY" class="mb-2 mini-thumbnail thumb-qty" name="ukuranXL" type="number">
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                         <span>Call Our Staff</span>
                     </div>
                 </div>
-                <button class="btn btn-warning mt-5">Confirm Your Design</button>
+                <button class="btn btn-warning mt-5" type="submit">Confirm Your Design</button>
             </div>
         </div>
 </div>
@@ -128,12 +128,12 @@
                 </button>
             </div>
             <div class="modal-body d-flex flex-column align-content-center">
-                <input class="btn btn-warning" style="color: white;" type='file' onchange="readURL(this);" />
-                <img id="blah" class="align-self-center mt-3" alt="Upload your Desain" />
+                <input class="btn btn-warning" style="color: white;" name="gambar_design" id="gambar_design" type='file' onchange="readURL(this);" />
+                <img id="blah" class="align-self-center mt-3" alt="Upload your Design" />
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-warning" style="color: white;">Save changes</button>
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+                <!--<button type="button" class="btn btn-warning" style="color: white;">Save changes</button>-->
             </div>
         </div>
     </div>

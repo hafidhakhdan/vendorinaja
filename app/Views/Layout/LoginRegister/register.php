@@ -39,7 +39,7 @@
                 </button>
                 <h5 class="modal-title " id="exampleModalLabel">Sign Up with email</h5>
             </div>
-            <form action="Auth/register" method="POST">
+            <form action="../Auth/register" method="POST">
                 <div class="modal-body d-flex flex-column align-items-center mt-3 ">
                     <p>Enter your email address to create an account</p>
                     <div class="button d-flex flex-column justify-content-between pr-2 ">

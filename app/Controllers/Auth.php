@@ -27,6 +27,7 @@ class Auth extends BaseController
 				$ses_data = [
 					'id_user'       => $data['id_user'],
 					'email'    		=> $data['email'],
+					'level' => $data['level'],
 					'logged_in'     => TRUE
 				];
 				$session->set($ses_data);
@@ -57,14 +58,15 @@ class Auth extends BaseController
 			$model = new UserModel();
 			$data = [
 				'email'    => $this->request->getVar('email'),
-				'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
+				'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+				'level' =>  1
 			];
 			$model->save($data);
 			return redirect()->to('/Home');
 		} else {
 			$data['validation'] = $this->validator;
-			echo view('register', $data);
-			echo 'dasdasd';
+			//echo view('register', $data);
+			//echo 'dasdasd';
 		}
 	}
 

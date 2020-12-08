@@ -31,7 +31,7 @@
  </div>
 
  <!--Modal Login (input pass dan email) -->
- <form action="Auth/login" method="POST">
+ <form action="../Auth/login" method="POST">
      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
          <div class="modal-dialog" role="document">
              <div class="modal-content">
