@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2020 at 01:42 AM
+-- Generation Time: Dec 09, 2020 at 12:56 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -24,22 +24,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `checkout`
+--
+
+CREATE TABLE `checkout` (
+  `id_checkout` int(5) NOT NULL,
+  `id_user` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `custom_produk`
 --
-create database vendorinaja;
-use vendorinaja;
 
 CREATE TABLE `custom_produk` (
   `id_custom` int(5) NOT NULL,
   `bahan_produk` varchar(20) NOT NULL,
   `warna_produk` varchar(20) NOT NULL,
-  `gambar_design` blob NOT NULL,
+  `gambar_design` varchar(255) NOT NULL,
   `ukuranS` int(5) NOT NULL,
   `ukuranM` int(5) NOT NULL,
   `ukuranL` int(5) NOT NULL,
   `ukuranXL` int(5) NOT NULL,
-  `id_transaksi` int(5) NOT NULL
+  `id_user` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `custom_produk`
+--
+
+INSERT INTO `custom_produk` (`id_custom`, `bahan_produk`, `warna_produk`, `gambar_design`, `ukuranS`, `ukuranM`, `ukuranL`, `ukuranXL`, `id_user`) VALUES
+(41, 'bahan satu', 'maroon', 'image.png', 2, 0, 0, 0, 19),
+(42, 'bahan dua', 'orange', '0.jpg', 3, 2, 5, 1, 19);
 
 -- --------------------------------------------------------
 
@@ -70,13 +87,19 @@ INSERT INTO `detail_produk` (`id_produk`, `id_det_produk`, `bahan_produk`, `desk
 --
 
 CREATE TABLE `pembayaran` (
-  `id_transaksi` varchar(5) NOT NULL,
-  `id_pembayaran` varchar(5) NOT NULL,
-  `metode_pembayaran` varchar(15) NOT NULL,
-  `dp` int(10) NOT NULL,
   `id_custom` int(5) NOT NULL,
-  `total_harga` int(10) NOT NULL
+  `bukti_pembayaran` varchar(255) NOT NULL,
+  `id_user` int(5) NOT NULL,
+  `id_pembayaran` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pembayaran`
+--
+
+INSERT INTO `pembayaran` (`id_custom`, `bukti_pembayaran`, `id_user`, `id_pembayaran`) VALUES
+(0, 'C:\\xampp\\tmp\\phpB0E9.tmp', 19, 1),
+(0, 'C:\\xampp\\tmp\\phpD27C.tmp', 19, 2);
 
 -- --------------------------------------------------------
 
@@ -105,13 +128,21 @@ INSERT INTO `produk` (`id_produk`, `kategori_produk`) VALUES
 --
 
 CREATE TABLE `transaksi` (
-  `id_transaksi` varchar(5) NOT NULL,
+  `id_transaksi` int(5) NOT NULL,
   `jumlah` int(11) NOT NULL,
-  `id_det_produk` varchar(5) NOT NULL,
-  `nama_pemesan` varchar(20) NOT NULL,
-  `alamat` varchar(100) NOT NULL,
-  `status_pembayaran` varchar(15) NOT NULL
+  `jasa_pengiriman` varchar(5) NOT NULL,
+  `status_pembayaran` varchar(15) NOT NULL,
+  `id_user` int(5) NOT NULL,
+  `created_at` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `jumlah`, `jasa_pengiriman`, `status_pembayaran`, `id_user`, `created_at`) VALUES
+(5, 0, 'JNT', 'Lunas', 19, '0000-00-00'),
+(6, 0, 'JNT', 'Lunas', 19, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -122,36 +153,33 @@ CREATE TABLE `transaksi` (
 CREATE TABLE `user` (
   `id_user` int(5) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(30) NOT NULL
+  `email` varchar(30) NOT NULL,
+  `level` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `password`, `email`) VALUES
-(1, '', 'hafidh606@gmail.com'),
-(2, '', 'kita@mail.com'),
-(3, '$2y$10$5mGtDujIAAc8h', 'havdasd@gmail.com'),
-(4, '$2y$10$TiWHk4wzXbaRg', 'fasfadasd@gmail.com'),
-(5, '$2y$10$S/lT9hYK1e9wE', 'gmail@gmail.com'),
-(6, '$2y$10$6vVZZOb0ZToiZ', 'kitabisa@gmail.com'),
-(7, '$2y$10$iwvk8o18bbZPD', 'kitakita@gmail.com'),
-(8, '$2y$10$ktQ2KeRr6uf8k', 'satusatu@gmail.com'),
-(9, '$2y$10$NpYF/M8rYVkw1', 'gokil123@gmail.com'),
-(10, '$2y$10$kipxDgnQH2EI3', 'vendor@gmail.com'),
-(13, '$2y$10$y1fkVfzhYxcLoql3/3sKqeInkhX5TRgtH0eKuhdWqY4a5PpbQkAI.', 'huhahe@gmail.com'),
-(14, '$2y$10$46WgClAva1Du7SyEGQ1pCewI9UVifvYqCoOKo1/L5oWrPf8SYI7GS', 'bangsat@gmail.com');
+INSERT INTO `user` (`id_user`, `password`, `email`, `level`) VALUES
+(19, '$2y$10$.l0xJKqLhcakeLwgCZi4ReGt4ysWO/J/shIwyHmI9gvkrTHl5e2Ti', 'mahmud@gmail.com', 1);
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `checkout`
+--
+ALTER TABLE `checkout`
+  ADD PRIMARY KEY (`id_checkout`);
+
+--
 -- Indexes for table `custom_produk`
 --
 ALTER TABLE `custom_produk`
-  ADD PRIMARY KEY (`id_custom`);
+  ADD PRIMARY KEY (`id_custom`),
+  ADD KEY `tes_id` (`id_user`);
 
 --
 -- Indexes for table `detail_produk`
@@ -163,8 +191,7 @@ ALTER TABLE `detail_produk`
 -- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
-  ADD PRIMARY KEY (`id_pembayaran`),
-  ADD KEY `id_transaksi` (`id_transaksi`);
+  ADD PRIMARY KEY (`id_pembayaran`);
 
 --
 -- Indexes for table `produk`
@@ -177,7 +204,7 @@ ALTER TABLE `produk`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
-  ADD KEY `id_det_produk` (`id_det_produk`);
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `user`
@@ -190,32 +217,56 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `checkout`
+--
+ALTER TABLE `checkout`
+  MODIFY `id_checkout` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `custom_produk`
 --
 ALTER TABLE `custom_produk`
-  MODIFY `id_custom` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_custom` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+
+--
+-- AUTO_INCREMENT for table `pembayaran`
+--
+ALTER TABLE `pembayaran`
+  MODIFY `id_pembayaran` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_transaksi` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `pembayaran`
+-- Constraints for table `checkout`
 --
-ALTER TABLE `pembayaran`
-  ADD CONSTRAINT `id_transaksi` FOREIGN KEY (`id_transaksi`) REFERENCES `transaksi` (`id_transaksi`);
+ALTER TABLE `checkout`
+  ADD CONSTRAINT `id_user_checkout` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
+
+--
+-- Constraints for table `custom_produk`
+--
+ALTER TABLE `custom_produk`
+  ADD CONSTRAINT `tes_id` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
 -- Constraints for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD CONSTRAINT `id_det_produk` FOREIGN KEY (`id_det_produk`) REFERENCES `detail_produk` (`id_det_produk`);
+  ADD CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
