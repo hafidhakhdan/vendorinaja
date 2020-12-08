@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `custom_produk`
 --
+create database vendorinaja;
+use vendorinaja;
 
 CREATE TABLE `custom_produk` (
   `id_custom` int(5) NOT NULL,
