@@ -29,18 +29,18 @@
                         <div class="mr-auto pl-2 d-flex">
                             <img src="/assets/img/image.png" width="40%" height="95px" alt="">
                             <div class="barang ml-4 ">
-                                <h6>T-Shirt #322</h6>
+                                <h6>T-Shirt <?= $row->id_custom; ?></h6>
                                 <div class="detail d-flex flex-column">
                                     <span><?= $row->bahan_produk; ?></span>
                                     <span><?= $row->warna_produk; ?></span>
                                     <span>S/M/L/XL</span>
                                     <span><?= $row->ukuranS; ?>/<?= $row->ukuranM; ?>/<?= $row->ukuranL; ?>/<?= $row->ukuranXL; ?></span>
-                                    <span><?= $row->gambar_design; ?></span>
+
                                 </div>
                             </div>
                         </div>
-                        <h6 class="qty pr-5">300</h6>
-                        <h6 class="price">$500</h6>
+                        <h6 class="qty pr-5"><?= $row->ukuranS + $row->ukuranM + $row->ukuranL + $row->ukuranXL; ?></h6>
+                        <h6 class="price">$<?= ($row->ukuranS * 5) + ($row->ukuranM * 7) + ($row->ukuranL * 9) + ($row->ukuranXL * 12); ?></h6>
                     </div>
                 <?php endforeach; ?>
                 <!--<div class="td mt-3 p-2 d-flex">
@@ -76,31 +76,33 @@
             </div>
         </div>
         <div class="col-md-4 ">
-            <div class=" pb-2 content content-1 p-3 d-flex flex-column justify-content-around">
-                <div class="delivery-option">
-                    <h6>Delivery Option</h6>
-                    <select class="form-control mt-4">
-                        <option>Choose a delivery service</option>
-                        <option>JNT</option>
-                        <option>JNE</option>
-                        <option>COD</option>
-                    </select>
+            <form method="POST" action="../Transaksi/save">
+                <div class=" pb-2 content content-1 p-3 d-flex flex-column justify-content-around">
+                    <div class="delivery-option">
+                        <h6>Delivery Option</h6>
+                        <select name="jasa_pengiriman" id="jasa_pengiriman" class="form-control mt-4">
+                            <option>Choose a delivery service</option>
+                            <option value="JNT">JNT</option>
+                            <option value="JNE">JNE</option>
+                            <option value="COD">COD</option>
+                        </select>
+                    </div>
+                    <div class="line-checkout"></div>
+                    <div class="Payment-option">
+                        <h6>Payment Option</h6>
+                        <select name="status_pembayaran" id="status_pembayaran" class="form-control mt-3">
+                            <option>Choose a payment service</option>
+                            <option value="DP">DP</option>
+                            <option value="Lunas">Lunas</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="line-checkout"></div>
-                <div class="Payment-option">
-                    <h6>Payment Option</h6>
-                    <select class="form-control mt-3">
-                        <option>Choose a payment service</option>
-                        <option>DP</option>
-                        <option>Lunas</option>
-                    </select>
+                <div class=" content content-2 p-3 mt-4">
+                    <h5>TOTAL</h5>
+                    <div class="total">$<?= ($row->ukuranS * 5) + ($row->ukuranM * 7) + ($row->ukuranL * 9) + ($row->ukuranXL * 12); ?></div>
+                    <button type="submit" class="btn btn-checkout mt-4">Pay Now!</button>
                 </div>
-            </div>
-            <div class=" content content-2 p-3 mt-4">
-                <h5>TOTAL</h5>
-                <div class="total">$xxx.xx</div>
-                <button class="btn btn-checkout mt-4">Pay Now!</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>

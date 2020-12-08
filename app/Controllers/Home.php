@@ -33,7 +33,10 @@ class Home extends BaseController
 
 	public function transaksi()
 	{
-		return view('transaction');
+		$model = new TransaksiModel();
+		$data['transaksi'] = $model->getDataCheckout()->getResult();
+		$data['checkout'] = $model->getDataCheckout()->getResult();
+		return view('transaction', $data);
 	}
 	public function custom()
 	{

@@ -17,39 +17,41 @@
             <div class="col-sm-4">
                 <img class="card-img" src="/assets/img/kaos.jpg" alt="Suresh Dasari Card">
             </div>
-            <div class="col-sm-7">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title">T-Shirt</h5>
-                            <p class="card-text">
-                                S &nbsp;&nbsp;&nbsp;&nbsp;x30<br>
-                                M &nbsp;&nbsp;&nbsp;x30<br>
-                                L &nbsp;&nbsp;&nbsp;&nbsp;x30<br>
-                                XL &nbsp;&nbsp;x30<br>
-                            </p>
-                            <p>
+            <?php foreach ($transaksi as $row) : ?>
+                <div class="col-sm-7">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title">T-Shirt</h5>
+                                <p class="card-text">
+                                    S &nbsp;&nbsp;&nbsp;&nbsp;x<?= $row->ukuranS; ?><br>
+                                    M &nbsp;&nbsp;&nbsp;x<?= $row->ukuranM; ?><br>
+                                    L &nbsp;&nbsp;&nbsp;&nbsp;x<?= $row->ukuranL; ?><br>
+                                    XL &nbsp;&nbsp;x<?= $row->ukuranXL; ?><br>
+                                </p>
+                            <?php endforeach; ?>
+                            <!--<p>
                                 <span style="color: red"> Harap Lunasi Sebelum : </span><br>
                                 21/10/2020 &nbsp; &nbsp; 23:59 WIB
-                            </p>
-                        </div>
-                        <div class="col2">
-                            <p>Tanggal Pembelian : 20/10/2020</p>
-                            <br>
-                            <p>
-                                <strong>
-                                    Harga Total <span class="ml-3">: $500</span> <br>
-                                    Dana Awal <span class="ml-3">&nbsp;&nbsp;: $250</span> <br>
-                                    Sisa Bayar <span class="ml-3">&nbsp;&nbsp;: $250</span> <br>
-                                </strong>
-                            </p>
-                            <button type="button" class="col-sm-10 btn btn-warning" data-toggle="modal" data-target="#modalUploadBukti">
-                                Pay Now
-                            </button>
+                            </p>-->
+                            </div>
+                            <div class="col2">
+                                <!--<p>Tanggal Pembelian : 20/10/2020</p>-->
+                                <br>
+                                <p>
+                                    <strong>
+                                        Harga Total <span class="ml-3">: $<?= ($row->ukuranS * 5) + ($row->ukuranM * 7) + ($row->ukuranL * 9) + ($row->ukuranXL * 12); ?></span> <br>
+                                        <!-- Dana Awal <span class="ml-3">&nbsp;&nbsp;: $250</span> <br>-->
+                                        <!-- Sisa Bayar <span class="ml-3">&nbsp;&nbsp;: $250</span> <br>-->
+                                    </strong>
+                                </p>
+                                <button type="button" class="col-sm-10 btn btn-warning" data-toggle="modal" data-target="#modalUploadBukti">
+                                    Pay Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
