@@ -19,7 +19,7 @@
         <div class="col-lg-6 col-md-7 pr-5">
             <h1 class="mt-5">Make your own <br> <span>identity here!</span></h1>
             <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. A tempore doloremque, quae impedit, ipsa rerum dolorem eveniet est, harum voluptatibus ut illum dolor assumenda cumque expedita perspiciatis laboriosam reiciendis quibusdam?</p>
-            <button class="btn btn-warning mt-5"> Learn More</button>
+            <button class="btnc btn-warning mt-5"> Learn More</button>
         </div>
     </div>
     <!-- content 2 -->
