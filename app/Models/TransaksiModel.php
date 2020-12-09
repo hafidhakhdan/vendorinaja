@@ -31,9 +31,16 @@ class TransaksiModel extends Model
 
     public function saveTransaksi($data)
     {
+        $query = $this->db->table('transaksi')->insert($data);
+        return $query;
+    }
+
+    public function savePembayaran($data)
+    {
         $query = $this->db->table('pembayaran')->insert($data);
         return $query;
     }
+
 
     // public function saveCheckout($dataDua)
     // {

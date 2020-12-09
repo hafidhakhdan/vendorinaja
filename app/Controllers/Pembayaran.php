@@ -24,7 +24,7 @@ class Pembayaran extends Controller
 
 
         $bukti_gambar->move('img');
-        $model->saveTransaksi($data);
+        $model->savePembayaran($data);
 
         return redirect()->to('/home/transaksi');
     }
